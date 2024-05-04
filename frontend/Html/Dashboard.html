@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Dasboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul style="font-size: large;">
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="Dashboard.html"><strong>Dashboard</strong></a></li>
+            <li><a href="contactindex2.html"><strong>Contact</strong></a></li>
+            <li><a href="About Usindex.html"><strong>About Us</strong></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="firstContainer">
+            <div class="profile">
+                <!-- Circular space for image -->
+                <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVgdPnMdBjCdxkKFnwvfzcvEA6RTfYRMuEA&s" alt="none" />
+                </div>
+                <!-- Name, Age, Vehicle Number -->
+                <div class="details">
+                    <p1>John Doe</p1>
+                    <p>Age:30</p>
+                </div>
+                <div class="detail">
+                    <p><strong>Number:-</strong> XYZ123</p>
+                    <p><strong>Email:-</strong> janirudh5525@gmail.com</p>
+                    <p><strong>Contact No:-</strong> 6266927816</p>
+                    <p><strong>address:-</strong> xxx colony,indore</p>
+                    <p><strong>Vehicle Registered:-</strong> 2</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="secondContainer">
+            <div class="box1">
+               <p><strong>Add Vehicle +</strong></p> 
+                <div class="buttons">
+                    <button><strong>Bike/Scooter</strong></button>
+                    <button><strong>Car</strong></button>
+                </div>
+            </div>
+            <div class="box2">
+                <p1>History</p1>
+                <table id="vehicleTable">
+                    <thead>
+                        <tr>
+                            <th>Vehicle No</th>
+                            <th>Date</th>
+                            <th>Entry Time</th>
+                            <th>Exit Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table content goes here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Sample JavaScript to change table content
+var table = document.getElementById("vehicleTable");
+var tbody = table.getElementsByTagName("tbody")[0];
+
+// Sample data
+var data = [
+    { vehicleNumber: "ABC123", date: "2024-04-07", entryTime: "10:00 AM", exitTime: "12:00 PM" },
+    { vehicleNumber: "XYZ456", date: "2024-04-07", entryTime: "01:00 PM", exitTime: "03:00 PM" }
+];
+
+// Populate table with data
+data.forEach(function(entry) {
+    var row = tbody.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    cell1.innerHTML = entry.vehicleNumber;
+    cell2.innerHTML = entry.date;
+    cell3.innerHTML = entry.entryTime;
+    cell4.innerHTML = entry.exitTime;
+});
+
+    </script>
+</body>
+</html>
